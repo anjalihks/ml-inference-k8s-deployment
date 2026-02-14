@@ -85,13 +85,19 @@ This project implements the following lifecycle:
 ## 📂 Project Structure
 
 ```
-End-to-End-ML-Application-Deployment/
+ml-inference-k8s-deployment/
 │
-├── train.py              # Model training script
-├── main.py               # FastAPI inference service
-├── requirements.txt      # Python dependencies
-├── Dockerfile            # Container definition
-├── k8s-deploy.yml        # Kubernetes Deployment & Service
+├── app/
+│   ├── train.py              # Model training script
+│   └── main.py               # FastAPI inference service
+│
+├── k8s/
+│   └── deployment.yaml       # Kubernetes Deployment & Service
+│
+├── screenshots/              # Deployment screenshots
+│
+├── requirements.txt          # Python dependencies
+├── Dockerfile                # Container definition
 ├── .gitignore
 └── README.md
 ```
@@ -200,7 +206,7 @@ Deployment includes:
 ### Deploy
 
 ```bash
-kubectl apply -f k8s-deploy.yml
+kubectl apply -f k8s/deployment.yaml
 ```
 
 ### Production Characteristics
@@ -254,12 +260,6 @@ Follows immutable infrastructure best practices.
 - Model version registry
 - Infrastructure as Code (Terraform)
 - Horizontal Pod Autoscaler
-
----
-
-## 📸 Screenshots 
-
-<img width="1920" height="1080" alt="Screenshot (161)" src="https://github.com/user-attachments/assets/54ff4cba-6a9c-475a-8514-427c47a385ad" />
 
 ---
 
