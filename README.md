@@ -94,8 +94,6 @@ ml-inference-k8s-deployment/
 ├── k8s/
 │   └── deployment.yaml       # Kubernetes Deployment & Service
 │
-├── screenshots/              # Deployment screenshots
-│
 ├── requirements.txt          # Python dependencies
 ├── Dockerfile                # Container definition
 ├── .gitignore
